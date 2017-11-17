@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AbrigoPets.Views.AddNewPetView">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <TableView HasUnevenRows="True">
+                <TableRoot >
+                    <TableSection Title="Informações Básicas" >
+                        
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Margin="15,10,15,10">
+                                <Label Text="Tipo: " VerticalOptions="Center"></Label>
+                                <Entry HorizontalOptions="FillAndExpand" Text="{Binding Type}"></Entry>
+                            </StackLayout>
+                        </ViewCell>
+                        
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Margin="15,10,15,10">
+                                <Label Text="Nome: " VerticalOptions="Center"></Label>
+                                <Entry HorizontalOptions="FillAndExpand" Text="{Binding Name}"></Entry>
+                            </StackLayout>
+                        </ViewCell>
+                        
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Margin="15,10,15,10">
+                                <Label Text="Raça: " VerticalOptions="Center"></Label>
+                                <Entry HorizontalOptions="FillAndExpand" Text="{Binding Breed}"></Entry>
+                            </StackLayout>
+                        </ViewCell>
+                        
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Margin="15,10,15,10">
+                                <Label Text="Sexo: " VerticalOptions="Center"></Label>
+                                <Entry HorizontalOptions="FillAndExpand" Text="{Binding Sex}"></Entry>
+                            </StackLayout>
+                        </ViewCell>
+                        
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Margin="15,10,15,10">
+                                <Label Text="Porte: " VerticalOptions="Center"></Label>
+                                <Entry HorizontalOptions="FillAndExpand" Text="{Binding Size}"></Entry>
+                            </StackLayout>
+                        </ViewCell>
+                        
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Margin="15,10,15,10">
+                                <Label Text="Idade: " VerticalOptions="Center"></Label>
+                                <Entry HorizontalOptions="FillAndExpand" Keyboard="Numeric" Text="{Binding Age}"></Entry>
+                            </StackLayout>
+                        </ViewCell>
+
+                        <ViewCell Height="120">
+                            <StackLayout Orientation="Horizontal" Margin="15,10,15,10" VerticalOptions="StartAndExpand">
+                                <Label Text="Descrição: " HorizontalOptions="StartAndExpand" VerticalOptions="Center"></Label>
+                                <Editor HorizontalOptions="CenterAndExpand" HeightRequest="100" WidthRequest="250" Text="{Binding Description}"></Editor>
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+                    
+                    <TableSection Title="Informações Úteis">
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Margin="15,10,15,10">
+                                <Label Text="Data De Chegada: " VerticalOptions="Center"></Label>
+                                <DatePicker Date="{Binding DateOfArrival}"></DatePicker>
+                            </StackLayout>
+                        </ViewCell>
+                        
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Margin="15,10,15,10">
+                                <Label Text="Próxima Vacina: " VerticalOptions="Center"></Label>
+                                <DatePicker Date="{Binding NextVaccine}"></DatePicker>
+                            </StackLayout>
+                        </ViewCell>
+                        
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Margin="15,10,15,10">
+                                <Label Text="Castrado: " VerticalOptions="Center"></Label>
+                                <Switch IsToggled="{Binding Castrated}"></Switch>
+                            </StackLayout>
+                        </ViewCell>
+                        
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Margin="15,10,15,10">
+                                <Label Text="Vacinas em dia: " VerticalOptions="Center"></Label>
+                                <Switch IsToggled="{Binding UpToDateVaccines}"></Switch>
+                            </StackLayout>
+                        </ViewCell>
+                        
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Margin="15,10,15,10">
+                                <Label Text="Já doado: " VerticalOptions="Center"></Label>
+                                <Switch IsToggled="{Binding ToBeAdopted}"></Switch>
+                            </StackLayout>
+                        </ViewCell>
+
+                        <ViewCell Height="220">
+                            <StackLayout Orientation="Horizontal" Margin="15,10,15,10" VerticalOptions="StartAndExpand">
+                                <Label Text="Notas: " VerticalOptions="Center"></Label>
+                                <Editor HorizontalOptions="CenterAndExpand" HeightRequest="200" WidthRequest="270" Text="{Binding Note}"></Editor>
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+                    
+                    <TableSection>
+                        <ViewCell>
+                            <Button Margin="15,10,15,10" Text="Adicionar Pet" Clicked="CreateNewAnimal"></Button>
+                        </ViewCell>
+                    </TableSection>
+                    
+                </TableRoot>
+            </TableView>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

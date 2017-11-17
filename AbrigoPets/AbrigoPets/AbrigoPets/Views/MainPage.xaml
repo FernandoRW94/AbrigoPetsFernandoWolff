@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:AbrigoPets.Views"
+             x:Class="AbrigoPets.Views.MainPage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Margin="15,15,15,15">
+            
+            <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" Margin="0,30,0,0">
+                <Button Text="Pets" Clicked="LoadPetsManagementView"></Button>
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" Margin="0,30,0,0">
+                <Button Text="Gerenciamento" Clicked="LoadShelterManagementView"></Button>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
