@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AbrigoPets.Views.ManagementView">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <TableView HasUnevenRows="True" Intent="Data">
+                <TableRoot >
+                    <TableSection Title="Informações Gerais" >
+
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Margin="15,10,15,10">
+                                <Label Text="Nome do abrigo: " VerticalOptions="Center" HorizontalOptions="StartAndExpand"></Label>
+                                <Label Text="{Binding ShelterName}"></Label>
+                            </StackLayout>
+                        </ViewCell>
+
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Margin="15,10,15,10">
+                                <Label Text="Dinheiro em caixa: " VerticalOptions="Center" HorizontalOptions="StartAndExpand"></Label>
+                                <Label Text="{Binding ShelterMoneyFormated}"></Label>
+                            </StackLayout>
+                        </ViewCell>
+
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Margin="15,10,15,10">
+                                <Label Text="Última receita: " VerticalOptions="Center" HorizontalOptions="StartAndExpand"></Label>
+                                <Label Text="{Binding LastRevenue}"></Label>
+                            </StackLayout>
+                        </ViewCell>
+                        
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Margin="15,10,15,10">
+                                <Label Text="Última despesa: " VerticalOptions="Center" HorizontalOptions="StartAndExpand"></Label>
+                                <Label Text="{Binding LastExpense}"></Label>
+                            </StackLayout>
+                        </ViewCell>
+
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Margin="15,10,15,10">
+                                <Label Text="Ração em estoque: " VerticalOptions="Center" HorizontalOptions="StartAndExpand"></Label>
+                                <Label Text="{Binding TotalFood}"></Label>
+                            </StackLayout>
+                        </ViewCell>
+
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Margin="15,10,15,10">
+                                <Label Text="Nº de animais: " VerticalOptions="Center" HorizontalOptions="StartAndExpand"></Label>
+                                <Label Text="{Binding TotalAnimals}"></Label>
+                            </StackLayout>
+                        </ViewCell>
+
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Margin="15,10,15,10">
+                                <Label Text="Nº de cães: " VerticalOptions="Center" HorizontalOptions="StartAndExpand"></Label>
+                                <Label Text="{Binding TotalDogs}"></Label>
+                            </StackLayout>
+                        </ViewCell>
+
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Margin="15,10,15,10">
+                                <Label Text="Nº de gatos: " VerticalOptions="Center" HorizontalOptions="StartAndExpand"></Label>
+                                <Label Text="{Binding TotalCats}"></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+
+                    <TableSection Title="Registros de Mudanças">
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Margin="15,10,15,10">
+                                <Label Text="Registrar entrada de ração: " VerticalOptions="Center" HorizontalOptions="StartAndExpand"></Label>
+                                <Entry HorizontalOptions="FillAndExpand" Text="{Binding FoodEntry}" Keyboard="Numeric"></Entry>
+                            </StackLayout>
+                        </ViewCell>
+
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Margin="15,10,15,10">
+                                <Label Text="Registrar consumo de ração: " VerticalOptions="Center" HorizontalOptions="StartAndExpand"></Label>
+                                <Entry HorizontalOptions="FillAndExpand" Text="{Binding FoodConsumption}" Keyboard="Numeric"></Entry>
+                            </StackLayout>
+                        </ViewCell>
+
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Margin="15,10,15,10">
+                                <Label Text="Registrar nova receita: " VerticalOptions="Center" HorizontalOptions="StartAndExpand"></Label>
+                                <Entry HorizontalOptions="FillAndExpand" Text="{Binding Revenue}" Keyboard="Numeric"></Entry>
+                            </StackLayout>
+                        </ViewCell>
+
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Margin="15,10,15,10">
+                                <Label Text="Registrar nova despesa: " VerticalOptions="Center" HorizontalOptions="StartAndExpand"></Label>
+                                <Entry HorizontalOptions="FillAndExpand" Text="{Binding Expense}" Keyboard="Numeric"></Entry>
+                            </StackLayout>
+                        </ViewCell>
+
+                        <ViewCell>
+                            <Button Margin="15,10,15,10" Text="Registrar mudanças" Clicked="RegisterChanges"></Button>
+                        </ViewCell>
+                    </TableSection>
+
+                </TableRoot>
+            </TableView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

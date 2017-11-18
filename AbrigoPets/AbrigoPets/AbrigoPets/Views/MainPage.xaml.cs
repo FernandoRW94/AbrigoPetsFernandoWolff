@@ -14,7 +14,7 @@ namespace AbrigoPets.Views
 
         private void LoadShelterManagementView(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new ShelterManagementView());
+            Navigation.PushAsync(new ManagementView());
         }
 
         private void LoadPetsManagementView(object sender, EventArgs e)
