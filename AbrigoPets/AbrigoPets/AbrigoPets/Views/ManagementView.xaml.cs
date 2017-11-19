@@ -65,8 +65,8 @@ namespace AbrigoPets.Views
             aux.TotalFood = Model.TotalFood;
             
             string resultString = await ManagementHelper.UpdateManagement(aux);
-
-            var result = JsonConvert.DeserializeObject<dynamic>(resultString);
+            
+            dynamic result = JsonConvert.DeserializeObject<ExpandoObject>(resultString);
 
             if(result != null && result.Success)
             {

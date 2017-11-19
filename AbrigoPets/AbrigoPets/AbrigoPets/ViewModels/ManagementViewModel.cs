@@ -128,9 +128,45 @@ namespace AbrigoPets.ViewModels
             }
         }
 
-        public decimal FoodEntry { get; set; }
-        public decimal FoodConsumption { get; set; }
-        public decimal Revenue { get; set; }
-        public decimal Expense { get; set; }
+        private decimal foodEntry;
+        public decimal FoodEntry
+        {
+            get { return this.foodEntry; }
+            set
+            {
+                this.foodEntry = value;
+                OnPropertyChanged("FoodEntry");
+            }
+        }
+
+        private decimal foodComsumption;
+        public decimal FoodConsumption {
+            get { return this.foodComsumption; }
+            set
+            {
+                this.foodComsumption = value;
+                OnPropertyChanged("FoodConsumption");
+            }
+        }
+
+        private decimal revenue;
+        public decimal Revenue {
+            get { return this.revenue; }
+            set
+            {
+                this.revenue = value;
+                OnPropertyChanged("Revenue");
+            }
+        }
+
+        private decimal expense;
+        public decimal Expense {
+            get { return this.expense; }
+            set
+            {
+                this.expense = value;
+                OnPropertyChanged("Expense");
+            }
+        }
     }
 }
