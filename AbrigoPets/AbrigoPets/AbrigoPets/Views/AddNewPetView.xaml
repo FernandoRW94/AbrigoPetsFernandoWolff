@@ -54,7 +54,7 @@
                         <ViewCell Height="120">
                             <StackLayout Orientation="Horizontal" Margin="15,10,15,10" VerticalOptions="StartAndExpand">
                                 <Label Text="Descrição: " HorizontalOptions="StartAndExpand" VerticalOptions="Center"></Label>
-                                <Editor HorizontalOptions="CenterAndExpand" HeightRequest="100" WidthRequest="250" Text="{Binding Description}"></Editor>
+                                <Editor HorizontalOptions="CenterAndExpand" HeightRequest="100" WidthRequest="210" Text="{Binding Description}"></Editor>
                             </StackLayout>
                         </ViewCell>
                     </TableSection>
@@ -98,7 +98,7 @@
                         <ViewCell Height="220">
                             <StackLayout Orientation="Horizontal" Margin="15,10,15,10" VerticalOptions="StartAndExpand">
                                 <Label Text="Notas: " VerticalOptions="Center"></Label>
-                                <Editor HorizontalOptions="CenterAndExpand" HeightRequest="200" WidthRequest="270" Text="{Binding Note}"></Editor>
+                                <Editor HorizontalOptions="CenterAndExpand" HeightRequest="200" WidthRequest="220" Text="{Binding Note}"></Editor>
                             </StackLayout>
                         </ViewCell>
                     </TableSection>

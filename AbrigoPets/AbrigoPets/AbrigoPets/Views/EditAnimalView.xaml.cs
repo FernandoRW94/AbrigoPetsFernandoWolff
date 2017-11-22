@@ -29,6 +29,14 @@ namespace AbrigoPets.Views
 
         private async void EditAnimal(object sender, EventArgs e)
         {
+            var validModel = validatePet();
+            if (!string.IsNullOrEmpty(validModel))
+            {
+                await DisplayAlert("Oops. Os seguintes campos precisam ser preenchidos...", string.Join(", ", validModel.Split(';')), "OK");
+
+                return;
+            }
+
             //Edit animal
             var result = await PetsHelper.UpdatePet(this.EditingModel);
 
@@ -47,6 +55,41 @@ namespace AbrigoPets.Views
 
             //Reload to AnimalsListView
             await Navigation.PopAsync(true);
+        }
+
+        private string validatePet()
+        {
+            string result = "";
+
+            if (string.IsNullOrEmpty(this.EditingModel.Type))
+            {
+                result += "Tipo;";
+            }
+            if (string.IsNullOrEmpty(this.EditingModel.Name))
+            {
+                result += "Nome;";
+            }
+            if (string.IsNullOrEmpty(this.EditingModel.Breed))
+            {
+                result += "Raça;";
+            }
+            if (string.IsNullOrEmpty(this.EditingModel.Size))
+            {
+                result += "Porte;";
+            }
+            if (string.IsNullOrEmpty(this.EditingModel.Sex))
+            {
+                result += "Sexo;";
+            }
+            if (this.EditingModel.Age < 0)
+            {
+                result += "Idade;";
+            }
+
+            if (result.EndsWith(";"))
+                result = result.Substring(0, result.Length - 1);
+
+            return result;
         }
     }
 }
