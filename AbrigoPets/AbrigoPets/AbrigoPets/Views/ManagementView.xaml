@@ -26,21 +26,21 @@
                         <ViewCell>
                             <StackLayout Orientation="Horizontal" Margin="15,10,15,10">
                                 <Label Text="Última receita: " VerticalOptions="Center" HorizontalOptions="StartAndExpand"></Label>
-                                <Label Text="{Binding LastRevenue}"></Label>
+                                <Label Text="{Binding LastRevenueFormated}"></Label>
                             </StackLayout>
                         </ViewCell>
                         
                         <ViewCell>
                             <StackLayout Orientation="Horizontal" Margin="15,10,15,10">
                                 <Label Text="Última despesa: " VerticalOptions="Center" HorizontalOptions="StartAndExpand"></Label>
-                                <Label Text="{Binding LastExpense}"></Label>
+                                <Label Text="{Binding LastExpenseFormated}"></Label>
                             </StackLayout>
                         </ViewCell>
 
                         <ViewCell>
                             <StackLayout Orientation="Horizontal" Margin="15,10,15,10">
                                 <Label Text="Ração em estoque: " VerticalOptions="Center" HorizontalOptions="StartAndExpand"></Label>
-                                <Label Text="{Binding TotalFood}"></Label>
+                                <Label Text="{Binding TotalFoodFormated}"></Label>
                             </StackLayout>
                         </ViewCell>
 

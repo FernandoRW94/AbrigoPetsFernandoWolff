@@ -23,7 +23,7 @@ namespace AbrigoPets.Views
             InitializeComponent();
 
             Title = "Animais no abrigo";
-
+            
             //GetAnimals list
             Animals = new ObservableCollection<PetViewModel>();
 

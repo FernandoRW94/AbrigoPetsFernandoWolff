@@ -12,7 +12,7 @@
                         <ViewCell>
                             <StackLayout Orientation="Horizontal" Margin="15,10,15,10">
                                 <Label Text="Tipo: " VerticalOptions="Center"></Label>
-                                <Entry HorizontalOptions="FillAndExpand" Text="{Binding Type}"></Entry>
+                                <Entry HorizontalOptions="FillAndExpand" Placeholder="Cachorro / Gato" Text="{Binding Type}"></Entry>
                             </StackLayout>
                         </ViewCell>
                         
@@ -32,15 +32,15 @@
                         
                         <ViewCell>
                             <StackLayout Orientation="Horizontal" Margin="15,10,15,10">
-                                <Label Text="Sexo: " VerticalOptions="Center"></Label>
-                                <Entry HorizontalOptions="FillAndExpand" Text="{Binding Sex}"></Entry>
+                                <Label Text="Gênero: " VerticalOptions="Center"></Label>
+                                <Entry HorizontalOptions="FillAndExpand" Placeholder="Macho / Fêmea" Text="{Binding Sex}"></Entry>
                             </StackLayout>
                         </ViewCell>
                         
                         <ViewCell>
                             <StackLayout Orientation="Horizontal" Margin="15,10,15,10">
                                 <Label Text="Porte: " VerticalOptions="Center"></Label>
-                                <Entry HorizontalOptions="FillAndExpand" Text="{Binding Size}"></Entry>
+                                <Entry HorizontalOptions="FillAndExpand" Placeholder="Pequeno / Médio / Grande" Text="{Binding Size}"></Entry>
                             </StackLayout>
                         </ViewCell>
                         

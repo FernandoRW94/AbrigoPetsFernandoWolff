@@ -9,6 +9,7 @@ namespace AbrigoPets.Views
         public MainPage()
         {
             InitializeComponent();
+               
             Title = Globals.AppName;
         }
 

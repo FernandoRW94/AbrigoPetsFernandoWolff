@@ -4,6 +4,6 @@
     {
         public static string AppName = "Aplicativo Pets Shelter";
 
-        public static string ServerPath = "http://192.168.0.106:50825";
+        public static string ServerPath = "http://abrigopetsbackend20171204.azurewebsites.net";
     }
 }

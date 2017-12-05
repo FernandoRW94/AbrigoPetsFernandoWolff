@@ -48,6 +48,7 @@ namespace AbrigoPets.ViewModels
             {
                 lastRevenue = value;
                 OnPropertyChanged("LastRevenue");
+                OnPropertyChanged("LastRevenueFormated");
             }
         }
 
@@ -63,6 +64,7 @@ namespace AbrigoPets.ViewModels
             {
                 lastExpense = value;
                 OnPropertyChanged("LastExpense");
+                OnPropertyChanged("LastExpenseFormated");
             }
         }
 
@@ -74,6 +76,7 @@ namespace AbrigoPets.ViewModels
             {
                 totalFood = value;
                 OnPropertyChanged("TotalFood");
+                OnPropertyChanged("TotalFoodFormated");
             }
         }
 
@@ -117,6 +120,26 @@ namespace AbrigoPets.ViewModels
             get { return ShelterMoney.ToString("C", CultureInfo.CurrentCulture); }
         }
 
+        public string LastRevenueFormated
+        {
+            get
+            {
+                return LastRevenue.ToString("C", CultureInfo.CurrentCulture);
+            }
+        }
+
+        public string TotalFoodFormated
+        {
+            get { return string.Format("{0}kg", TotalFood); }
+        }
+
+        public string LastExpenseFormated
+        {
+            get
+            {
+                return LastExpense.ToString("C", CultureInfo.CurrentCulture);
+            }
+        }
 
         public event PropertyChangedEventHandler PropertyChanged;
 

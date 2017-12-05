@@ -4,13 +4,13 @@
              xmlns:local="clr-namespace:AbrigoPets.Views"
              x:Class="AbrigoPets.Views.MainPage">
     <ContentPage.Content>
-        <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Margin="15,15,15,15">
-            
-            <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" Margin="0,30,0,0">
+        <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Margin="15,15,15,15">
+
+            <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="0,30,0,0">
                 <Button Text="Pets" Clicked="LoadPetsManagementView"></Button>
             </StackLayout>
 
-            <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" Margin="0,30,0,0">
+            <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="0,30,0,0">
                 <Button Text="Gerenciamento" Clicked="LoadShelterManagementView"></Button>
             </StackLayout>
 

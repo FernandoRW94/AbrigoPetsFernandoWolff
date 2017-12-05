@@ -23,7 +23,7 @@ namespace AbrigoPets.Views
         {
             InitializeComponent();
             Title = "Gerenciamento";
-
+            
             Model = new ManagementViewModel();
 
             GetManagementInfosFromServer();
@@ -45,16 +45,16 @@ namespace AbrigoPets.Views
                 Model.LastExpense = Model.Expense;
                 Model.Expense = 0;
             }
-            if(Model.FoodConsumption > 0)
-            {
-                Model.TotalFood -= Model.FoodConsumption;
-                Model.FoodConsumption = 0;
-            }
-            if(Model.FoodEntry > 0)
+            if (Model.FoodEntry > 0)
             {
                 Model.TotalFood += Model.FoodEntry;
                 Model.FoodEntry = 0;
             }
+            if (Model.FoodConsumption > 0)
+            {
+                Model.TotalFood -= Model.FoodConsumption;
+                Model.FoodConsumption = 0;
+            }            
 
             dynamic aux = new ExpandoObject();
 
