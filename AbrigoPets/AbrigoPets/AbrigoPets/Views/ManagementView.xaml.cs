@@ -95,8 +95,8 @@ namespace AbrigoPets.Views
                 var animals = JsonConvert.DeserializeObject<List<Pet>>(animalsJson);
 
                 Model.TotalAnimals = animals.Count;
-                Model.TotalDogs = animals.Count(x => x.Type.Equals("Cachorro") || x.Type.Equals("Dog"));
-                Model.TotalCats = animals.Count(x => x.Type.Equals("Gato") || x.Type.Equals("Cat"));
+                Model.TotalDogs = animals.Count(x => x.Type.ToLower().Equals("cachorro") || x.Type.ToLower().Equals("dog"));
+                Model.TotalCats = animals.Count(x => x.Type.ToLower().Equals("gato") || x.Type.ToLower().Equals("cat"));
             }
             else
             {
